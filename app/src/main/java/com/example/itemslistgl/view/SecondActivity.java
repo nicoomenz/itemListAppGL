@@ -32,7 +32,7 @@ public class SecondActivity extends AppCompatActivity {
         TextView descriptionAc2 = findViewById(R.id.description_activity2);
         descriptionAc2.setText(description);
         ImageView imageAc2 = findViewById(R.id.imageMain_activity2);
-        Picasso.get().load(image).into(imageAc2);
+        Picasso.get().load(image).placeholder(R.drawable.loadingimage).error(R.drawable.imagenotfound).into(imageAc2);
 
 
     }

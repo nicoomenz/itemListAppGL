@@ -67,6 +67,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
             this.description.setText(item.getDescription());
             Picasso.get()
                     .load(item.getImageURL())
+                    .placeholder(R.drawable.loadingimage)
+                    .error(R.drawable.imagenotfound)
                     .into(this.image);
             // Definimos que por cada elemento de nuestro recycler view, tenemos un click listener
             // que se comporta de la siguiente manera...
