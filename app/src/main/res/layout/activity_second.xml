@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2E2E2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleMain_activity2"
+        android:layout_width="393dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:text="titlaMain"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageMain_activity2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description_activity2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center_vertical"
+        android:text="description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageMain_activity2" />
+
+    <ImageView
+        android:id="@+id/imageMain_activity2"
+        android:layout_width="190dp"
+        android:layout_height="169dp"
+        app:layout_constraintBottom_toTopOf="@+id/description_activity2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMain_activity2" />
+</android.support.constraint.ConstraintLayout>
