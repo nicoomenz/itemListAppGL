@@ -11,7 +11,6 @@ import com.example.itemslistgl.Model.Item;
 import com.example.itemslistgl.R;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -21,12 +20,14 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
-        Item item = intent.getParcelableExtra("item");
+        Item item = intent.getParcelableExtra("item"); //recupero el item
 
+        //recupero titulo, imagen y descripcion del item
         String title = item.getTitle();
         String description = item.getDescription();
         String image = item.getImageURL();
 
+        //seteo la view activity_Second
         TextView titleMain = findViewById(R.id.titleMain_activity2);
         titleMain.setText(title);
         TextView descriptionAc2 = findViewById(R.id.description_activity2);
