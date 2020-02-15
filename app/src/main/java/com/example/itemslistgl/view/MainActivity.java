@@ -2,7 +2,6 @@ package com.example.itemslistgl.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new ItemsAdapter(itemList, R.layout.items_view_list, new ItemsAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Item item, int position) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("item", itemList.get(position));
                 startActivity(intent);
             }

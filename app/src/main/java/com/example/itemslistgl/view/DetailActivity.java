@@ -12,7 +12,7 @@ import com.example.itemslistgl.R;
 import com.squareup.picasso.Picasso;
 
 
-public class SecondActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
