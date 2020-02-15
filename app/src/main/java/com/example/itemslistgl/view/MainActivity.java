@@ -73,26 +73,23 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(this);
-        // Implemento nuestro OnItemClickListener propio, sobreescribiendo el método que
-        // defino en el adaptador, y recibo los parámetros que necesitamos
         mAdapter = new ItemsAdapter(itemList, R.layout.items_view_list, new ItemsAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Item item, int position) {
-                //entrar al detalle(cambiar de activie) PARSEAR O SERIALIZAR
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("item", itemList.get(position));
                 startActivity(intent);
             }
         });
-        // Lo usamos en caso de que sepamos que el layout no va a cambiar de tamaño, mejorando la performance
+        //mejora la performance
         mRecyclerView.setHasFixedSize(true);
         // Añade un efecto por defecto, si le pasamos null lo desactivamos por completo
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        // Enlazamos el layout manager y adaptor directamente al recycler view
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
+        //divide el recyclerView
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         mRecyclerView.addItemDecoration(dividerItemDecoration);
     }
